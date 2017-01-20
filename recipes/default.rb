@@ -20,13 +20,13 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security' do
 end
 
 windows_firewall_rule 'Sql Server DTC' do
-	localport node['msdtc']['fromport']..node['msdtc']['toport']
+	localport "node['msdtc']['fromport']..node['msdtc']['toport']"
 	protocol 'TCP'
 	firewall_action :allow
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\Internet' do
-  values [{:name => 'Ports', :type => :REG_MULTI_SZ, :data => node['msdtc']['fromport']-node['msdtc']['toport']},
+  values [{:name => 'Ports', :type => :REG_MULTI_SZ, :data => "node['msdtc']['fromport']-node['msdtc']['toport']"},
           {:name => 'PortsInternetAvailable', :type => :REG_SZ, :data => node['msdtc']['PortsInternetAvailable']},
           {:name => 'UseInternetPorts', :type => :REG_SZ, :data => node['msdtc']['UseInternetPorts']}
          ]
