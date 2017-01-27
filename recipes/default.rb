@@ -14,7 +14,8 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security' do
           {:name => 'NetworkDtcAccessClients', :type => :dword, :data => node['msdtc']['NetworkDtcAccessClients']},
           {:name => 'NetworkDtcAccessInbound', :type => :dword, :data => node['msdtc']['NetworkDtcAccessInbound']},
           {:name => 'NetworkDtcAccessOutbound', :type => :dword, :data => node['msdtc']['NetworkDtcAccessOutbound']},
-          {:name => 'NetworkDtcAccessTip', :type => :dword, :data => node['msdtc']['NetworkDtcAccessTip']}
+          {:name => 'NetworkDtcAccessTip', :type => :dword, :data => node['msdtc']['NetworkDtcAccessTip']},
+		  {:name => 'XaTransactions', :type => :dword, :data => node['msdtc']['XaTransactions']}		  
          ]
   action :create
 end
