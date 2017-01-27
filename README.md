@@ -1,1 +1,1 @@
-# cookbook-enable-MSDTC
+# cookbook-msdtc

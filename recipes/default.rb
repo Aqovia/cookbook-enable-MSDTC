@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: cookbook-enable-MSDTC
+# Cookbook Name:: cookbook-msdtc
 # Recipe:: default
 #
 # Copyright 2017, Aqovia Ltd.

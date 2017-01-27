@@ -1,4 +1,4 @@
-name             'enable-MSDTC'
+name             'msdtc'
 maintainer       'AQOVIA'
 maintainer_email 'info@aqovia.com'
 license          'All rights reserved'
