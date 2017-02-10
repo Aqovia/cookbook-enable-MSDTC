@@ -33,3 +33,11 @@ registry_key 'HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\Internet' do
          ]
   action :create
 end
+
+windows_service 'MSDTC' do
+  action :enable
+end
+
+windows_service 'MSDTC' do
+  action :start
+end
